@@ -1,0 +1,56 @@
+git touch  # 创建管理库
+
+git status  #查看git中的内容，
+
+git add 1.py # 编程可以被提交状态
+
+
+# github 管理库状态转换
+       Untracked   unmodifed   Hodified          staged
+
+       未知文件    这两个状态都是unstage状态     可以提交状态 
+
+          | ------------add-------------------------->
+                    
+                      |---edit file->
+    
+                                 |-- stage the file-->
+
+                       <---------------commit 提交------|
+
+          <--remove---|
+
+
+git commit -m " create 1.py"  #  提交1.py
+
+git log   #输出log
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                
+ 
+                        
