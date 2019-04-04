@@ -1,24 +1,27 @@
-git touch  # 创建管理库
+git touch           # 创建管理库
 
-git status  #查看git中的内容，
+git status          #查看git中的内容，
 
-git add 1.py # 编程可以被提交状态
+git add 1.py        # 编程可以被提交状态
 
-
-# github 管理库状态转换
-       Untracked   unmodifed   Hodified          staged
-
-       未知文件    这两个状态都是unstage状态     可以提交状态 
-
-          | ------------add-------------------------->
-                    
-                      |---edit file->
-    
-                                 |-- stage the file-->
-
-                       <---------------commit 提交------|
-
-          <--remove---|
+----------------------------------------------------------------------
+# github 管理库状态转换                                               |
+       Untracked   unmodifed   Hodified          staged              |
+								     |
+       未知文件    这两个状态都是unstage状态     可以提交状态          |
+								     |
+          | ------------add-------------------------->               |
+        						             |            
+                      |---edit file->				     |
+    								     |
+                                 |-- stage the file-->		     |
+								     |
+                       <---------------commit 提交------|	     |
+								     |
+          <--remove---|						     |
+								     |
+								     |
+----------------------------------------------------------------------
 
 
 git commit -m " create 1.py"  #  提交1.py
@@ -31,10 +34,56 @@ git log   #输出log
 
 git diff    #可以查看本地和git上文件的差异。
 
+git diff --cached  # 查看修改   
+
+git diff HEAD  
+
+
+**************************************************************
+
+git log --oneline             # 按行显示log
+
+
+git commit --amend --no-edit  # 这次改变合并到之前的change中，no-edit表示不编辑，直接合并到上一个
+
+git status -s                 # "-s" status的缩写
+
+git resset 1.py               # add后取消add
+ 
+
+每个 commit 都有自己的 id 数字号, HEAD 是一个指针, 指引当前的状态是在哪个 commit. 
+最近的一次 commit 在最右边, 我们如果要回到过去, 就是让 HEAD 回到过去并 reset 
+此时的 HEAD 到过去的位置.
+
+
+git reset --hard HEAD         # 将指针移动到初始状态
+
+git reset --hard HEAD ^2      # 回到上上个步骤
+
+git reset --hard 2a17834      # 回到指定的位置
+
+git reflog                    # head 的每一步变化
+
+
+
+git checkout c6762a1 --1.py   # 1.py文件回到某一步，checkout是单个文件。
 
 
 
 
+******************************************************************************
+
+
+
+
+git log --oneline --graph     # 使用graph来查看分支。
+
+git branch dev                # 创建dev 分支
+
+git branch		      # 查看当前分支
+
+
+  
 
 
 
