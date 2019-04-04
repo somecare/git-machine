@@ -82,8 +82,49 @@ git branch dev                # 创建dev 分支
 
 git branch		      # 查看当前分支
 
+git checkout dev	      # 将HEAD切换到 分支dev
+
+git checkout -b dev2	      # 创建dev2 并切换到dev2
+
+
+git commit -am "change 3 in dev" # ‘-am’add所有并commit
+
+
+git merge dev                 #  切换到某一枝干，将dev 合并
+
+git log --oneline --graph     # 查看切换后结果  
 
   
+
+要注意的是, 如果直接 git merge dev, git 会采用默认的 Fast forward 格式
+进行 merge, 这样 merge 的这次操作不会有 commit 信息. log 中也不会有分支
+的图案. 我们可以采取 --no-ff 这种方式保留 merge 的 commit 信息.
+
+
+git merge --no-ff -m "keep merge info "dev    # 保留merge信息
+
+git log --oneline --graph  
+
+
+************************************************************************
+
+
+
+rebase 在自己的分支使用。
+
+git rebase dev      # 当前在主分支，基于dev分支修改(很危险)
+
+
+
+*******************************************************************************
+
+
+暂存的空间 ： 
+
+git stash           # 将当前的修改过的文件放到临时文件
+
+git stash pop       # 返回修改
+
 
 
 
